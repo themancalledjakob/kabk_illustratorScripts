@@ -1,6 +1,4 @@
-(function() {
-    var docRef = app.activeDocument;
-    var textRef = docRef.textFrames;
+function giveCharactersCharacter(textRef) {
     var charCount = textRef.textRange.characters.length;
     var fontCount = textFonts.length;
     for(var i=0; i<charCount; i++) {
@@ -11,9 +9,9 @@
 
         // set a random color for each character
         var randomColor = new RGBColor();
-        randomColor.red = Math.floor(Math.random() * fontCount);
-        randomColor.green = Math.floor(Math.random() * fontCount);
-        randomColor.blue = Math.floor(Math.random() * fontCount);
+        randomColor.red = Math.floor(Math.random() * 255);
+        randomColor.green = Math.floor(Math.random() * 255);
+        randomColor.blue = Math.floor(Math.random() * 255);
         characterAttributes.fillColor = randomColor;
 
         // why not rotate the letters?
@@ -32,5 +30,13 @@
         characterAttributes.horizontalScale = horizontalScale;
         var verticalScale = Math.cos(i * 0.1) * 100 + 200;
         characterAttributes.verticalScale = verticalScale;
+    }
+}
+
+(function() {
+    var docRef = app.activeDocument;
+    var textRefs = docRef.textFrames;
+    for (var i = 0; i < textRefs.length; i++) {
+        giveCharactersCharacter(textRefs[i]);
     }
 })();
