@@ -3,6 +3,7 @@
 Yes, you can use JavaScript to make your design tasks in Illustrator more exciting!
 Important resources:
 https://www.adobe.com/devnet/illustrator/scripting.html
+https://illustrator-scripting-guide.readthedocs.io/
 
 Also search in github for scripts:
 https://github.com/search?q=illustrator+script
