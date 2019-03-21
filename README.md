@@ -28,3 +28,6 @@ https://gist.github.com/banksean/304522
 The declaration on the first line assumes "perlin-noise-simplex.js" is placed under "lib" folder under "Scripts" folder of Adobe Illlustrator.
 
 The file is also in this repository in the "lib" folder for your convenience.
+
+## tips
+- to change syntax highlighting in Atom, do `ctrl+shift+L` and select `JavaScript`
